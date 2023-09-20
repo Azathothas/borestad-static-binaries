@@ -1,0 +1,4 @@
+curl 8.1.2 (x86_64-pc-linux-musl) libcurl/8.1.2 mbedTLS/2.28.3 zlib/1.2.13 libssh2/1.11.0 nghttp2/1.54.0
+Release-Date: 2023-05-30
+Protocols: dict file ftp ftps gopher gophers http https imap imaps mqtt pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp
+Features: alt-svc AsynchDNS HSTS HTTP2 HTTPS-proxy IPv6 Largefile libz NTLM NTLM_WB SSL threadsafe UnixSockets
