@@ -22,6 +22,8 @@ function ndjson() {
   gojq -r '.[] | @base64' $1
 }
 
+TOTAL=$(jq '.[].name' $ROOT/cron/sources.config.json | wc -l)
+
 for row in $(ndjson $ROOT/cron/sources.config.json); do
 
   _jq() {
@@ -29,6 +31,10 @@ for row in $(ndjson $ROOT/cron/sources.config.json); do
   }
 
   echo '────────────────────────────────────────────────────────────────────────────────'
+
+  I=$((I+1));
+  echo "[$I of $TOTAL]"
+  echo
 
   NAME=$(_jq '.name')
   EGET_URL=$(_jq '.eget_url')
